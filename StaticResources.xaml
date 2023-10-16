@@ -1,0 +1,45 @@
+<Window.Resources>
+    <Style x:Key="RunToggleStyle" TargetType="ToggleButton">
+        <Setter Property="Content" Value="Start"/>
+        <Setter Property="FontSize" Value="24"/>
+        <Setter Property="Foreground" Value="#F0F0F0"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ToggleButton">
+                    <Border Name="RunToggleBorder">
+                        <Border.Style>
+                            <Style TargetType="Border">
+                                <Setter Property="Width" Value="150"/>
+                                <Setter Property="Height" Value="50"/>
+                                <Setter Property="Margin" Value="10"/>
+                                <Setter Property="Padding" Value="5"/>
+                                <Setter Property="HorizontalAlignment" Value="Left"/>
+                                <Setter Property="Background" Value="#4A4A5E"/>
+                                <Setter Property="BorderThickness" Value="0"/>
+                                <Setter Property="CornerRadius" Value="10"/>
+                            </Style>
+                        </Border.Style>
+                        <ContentPresenter>
+                            <ContentPresenter.Style>
+                                <Style TargetType="ContentPresenter">
+                                    <Setter Property="HorizontalAlignment" Value="Center"/>
+                                    <Setter Property="VerticalAlignment" Value="Center"/>
+                                </Style>
+                            </ContentPresenter.Style>
+                        </ContentPresenter>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter TargetName="RunToggleBorder" Property="Background" Value="#FFC107"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsChecked" Value="True">
+                <Setter Property="Content" Value="Stop"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+</Window.Resources>
